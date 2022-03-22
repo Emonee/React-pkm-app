@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import AddTeamForm from './Components/AddTeamForm/AddTeamForm'
+import SmallTeamCards from './Components/SmallTeamCards/SmallTeamCards';
+import Options from './Components/Options/Options';
+import './App.css'
 
-function App() {
+const App = () => {
+  const [pkmTeams, setPkmTeams] = useState(JSON.parse(localStorage.getItem('pkmTeams')) || [])
+  useEffect(() => {
+    localStorage.setItem('pkmTeams', JSON.stringify(pkmTeams))
+  }, [pkmTeams]);
+  const deleteTeams = () => setPkmTeams([])
+  const deleteLastTeam = () => {
+    setPkmTeams(prevState => {
+      const arr = [...prevState]
+      arr.pop()
+      return arr
+    })
+  }
+
+  const [pkmList, setPkmList] = useState(false)
+  useEffect(() => {
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+      .then(res => res.json())
+      .then(json => setPkmList(json.results))
+  }, []);
+
+  const [showForm, setShowForm] = useState(false)
+  const addTeam = () => {
+    setShowForm(!showForm)
+  }
+
+  const smallCards = pkmTeams.map(obj => <SmallTeamCards teamData={obj} pkmList={pkmList} key={obj.teamId} />)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Options addTeam={addTeam} deleteLastTeam={deleteLastTeam} deleteTeams={deleteTeams} />
+      <div className='space-nav'></div>
+      {showForm && <AddTeamForm data={pkmList} setPkmTeams={setPkmTeams} togleForm={setShowForm}/>}
+      <div className='small-team-cards-container'>
+        {pkmList ? smallCards : <h2>Loading Teams...</h2>}
+      </div>
+    </>
   );
 }
 

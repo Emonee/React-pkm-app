@@ -1,0 +1,56 @@
+.small-team-cards-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  background-color: var(--light-purple);
+  padding: 20px;
+  color: var(--dark-purple);
+  width: clamp(418px, 50%, 550px);
+  text-transform: capitalize;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.small-team-cards-content h2 {
+  font-size: var(--large-font);
+}
+
+.small-team-cards-content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 30px;
+}
+
+.small-team-cards-content li {
+  display: block;
+  border-bottom: 2px solid var(--dark-green);
+  border-right: 2px solid var(--dark-green);
+  border-left: 2px solid var(--dark-green);
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+  background-color: var(--dark-purple);
+  color: white;
+}
+
+.small-team-cards-content button {
+  background-color: white;
+  padding: 10px;
+  border: 2px solid var(--dark-green);
+  border-radius: 20px;
+  font-size: var(--small-font);
+}
+
+.small-team-cards-content button:hover {
+  background-color: var(--dark-green);
+  color: white;
+}
+
+.small-team-cards-content button:active {
+  background-color: darkgreen;
+}

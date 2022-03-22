@@ -1,0 +1,38 @@
+.add-team-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 50px auto;
+  background-color: var(--light-purple);
+  padding: 30px;
+  width: min(90%, 400px);
+  border-radius: 20px;
+  z-index: 1;
+
+  display: grid;
+  gap: 15px;
+}
+
+.add-team-form p {
+  color: red;
+  font-size: var(--small-font);
+  text-align: center;
+}
+
+.add-team-form input {
+  padding: 7px;
+}
+
+.add-team-form select {
+  padding: 7px;
+}
+
+.add-team-form button {
+  padding: 7px;
+  background-color: var(--dark-green);
+  width: min(100%, 200px);
+  margin: 0 auto;
+  border: none;
+  border-radius: 10px;
+}

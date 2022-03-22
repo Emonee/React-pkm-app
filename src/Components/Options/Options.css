@@ -1,0 +1,14 @@
+.options-container {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.options-container button {
+  width: 100%;
+  border: 1px solid var(--dark-purple);
+  border-radius: none;
+  padding: 5px;
+}

@@ -1,0 +1,48 @@
+.modal-container {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.team-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 50px auto;
+  background-color: var(--dark-green);
+  padding: 30px;
+  width: min(90%, 1250px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 1;
+}
+
+#close-team-button {
+  border: 2px solid var(--dark-purple);
+}
+#close-team-button:hover {
+  background-color: red;
+}
+#close-team-button:active {
+  background-color: darkred;
+}
+
+.pkms-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pkms-container img {
+  width: 135px;
+  height: 135px;
+}
