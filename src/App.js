@@ -34,7 +34,7 @@ const App = () => {
 
   return (
     <>
-      <Options addTeam={addTeam} deleteLastTeam={deleteLastTeam} deleteTeams={deleteTeams} />
+      <Options addTeam={addTeam} deleteLastTeam={deleteLastTeam} deleteTeams={deleteTeams} pkmList={pkmList}/>
       <div className='space-nav'></div>
       {showForm && <AddTeamForm data={pkmList} setPkmTeams={setPkmTeams} togleForm={setShowForm}/>}
       <div className='small-team-cards-container'>

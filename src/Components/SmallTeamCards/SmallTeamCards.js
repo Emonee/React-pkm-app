@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TeamCard from '../TeamCard/TeamCard';
+import PkmList from './PkmList';
 import './SmallTeamCards.css'
 
 const SmallTeamCards = (props) => {
@@ -11,12 +12,12 @@ const SmallTeamCards = (props) => {
       <h2>{props.teamData.teamName}</h2>
       <button onClick={toggleCard}>{viewMore ? 'Show Less' : 'Show More'}</button>
       <ul>
-        <li>{props.pkmList[props.teamData.firstPkm - 1].name}</li>
-        <li>{props.pkmList[props.teamData.secondPkm - 1].name}</li>
-        <li>{props.pkmList[props.teamData.thirdPkm - 1].name}</li>
-        <li>{props.pkmList[props.teamData.fourthPkm - 1].name}</li>
-        <li>{props.pkmList[props.teamData.fifthPkm - 1].name}</li>
-        <li>{props.pkmList[props.teamData.sixthPkm - 1].name}</li>
+        <PkmList name={props.pkmList[props.teamData.firstPkm - 1].name} num={props.teamData.firstPkm - 1}/>
+        <PkmList name={props.pkmList[props.teamData.secondPkm - 1].name} num={props.teamData.secondPkm - 1}/>
+        <PkmList name={props.pkmList[props.teamData.thirdPkm - 1].name} num={props.teamData.thirdPkm - 1}/>
+        <PkmList name={props.pkmList[props.teamData.fourthPkm - 1].name} num={props.teamData.fourthPkm - 1}/>
+        <PkmList name={props.pkmList[props.teamData.fifthPkm - 1].name} num={props.teamData.fifthPkm - 1}/>
+        <PkmList name={props.pkmList[props.teamData.sixthPkm - 1].name} num={props.teamData.sixthPkm - 1}/>
       </ul>
       {viewMore && <TeamCard pkmList={props.pkmList} teamData={props.teamData} toggleCard={toggleCard}/>}
     </div>

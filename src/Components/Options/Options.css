@@ -1,13 +1,11 @@
 .options-container {
   position: fixed;
   width: 100%;
-  display: flex;
-  justify-content: center;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr
 }
 
-.options-container button {
-  width: 100%;
+.options-container button, input {
   border: 1px solid var(--dark-purple);
   border-radius: none;
   padding: 5px;

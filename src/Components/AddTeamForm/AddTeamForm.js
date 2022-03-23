@@ -5,13 +5,13 @@ import './AddTeamForm.css'
 const AddTeamForm = (props) => {
   const [form, setForm] = useState({
     teamId: nanoid(),
-    teamName: null,
-    firstPkm: null,
-    secondPkm: null,
-    thirdPkm: null,
-    fourthPkm: null,
-    fifthPkm: null,
-    sixthPkm: null,
+    teamName: '',
+    firstPkm: '',
+    secondPkm: '',
+    thirdPkm: '',
+    fourthPkm: '',
+    fifthPkm: '',
+    sixthPkm: '',
   })
   function handleChange(event) {
     const {name, value, type, checked} = event.target
