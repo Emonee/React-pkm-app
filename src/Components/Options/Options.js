@@ -23,7 +23,7 @@ const Options = (props) => {
       <button onClick={props.deleteLastTeam}>Delete last Team</button>
       <button onClick={props.deleteTeams}>Delete All</button>
       <input
-        onKeyPress={() => {if(window.event.keyCode == '13') toggleSearch()}}
+        onKeyPress={() => {if(window.event.keyCode === 13) toggleSearch()}}
         onChange={handleChange}
         type='search'
         value={searchInput}

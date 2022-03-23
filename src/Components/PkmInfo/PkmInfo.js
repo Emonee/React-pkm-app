@@ -20,7 +20,7 @@ const PkmInfo = (props) => {
         types: json.types.map(obj => obj.type.name)
       }))
       .then(data => setPkmData(data))
-  }, []);
+  }, [props.pkm]);
 
   const typesArr = pkmData && pkmData.types.map(type => <span key={type}> {type}</span>)
 
