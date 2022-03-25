@@ -156,11 +156,11 @@ const PkmInfo = (props) => {
               </ul>
               {pkmData.totalWeakStrong && (
                 <>
-                  <p>Weaknesses (resive more dmg from)</p>
+                  <p>Weaknesses (receive more dmg from)</p>
                   <ul className='weak-res-ul'>
                     {weakArr}
                   </ul>
-                  <p>Resistances (resive less dmg from)</p>
+                  <p>Resistances (receive less dmg from)</p>
                   <ul className='weak-res-ul'>
                     {resArr}
                   </ul>

@@ -9,7 +9,7 @@ const SearchPkm = (props) => {
   const pkmDataList = pkmList && pkmList.map(name => <option key={name}>{name}</option>)
   const [showSearch, setShowSearch] = useState(false)
   const [error, setError] = useState(false);
-  const valueWithOutSpaces = searchInput.trim()
+  const valueWithOutSpaces = searchInput.trim().toLocaleLowerCase()
 
   function toggleSearch() {    
     setError(false)
