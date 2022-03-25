@@ -11,7 +11,7 @@ const SmallTeamCards = (props) => {
     <div className='small-team-cards-content'>
       <h2>{props.teamData.teamName}</h2>
       <button onClick={toggleCard}>{viewMore ? 'Show Less' : 'Show More'}</button>
-      <ul>
+      <ul className='small-team-cards-ul'>
         <PkmList name={props.pkmList[props.teamData.firstPkm - 1].name} num={props.teamData.firstPkm - 1}/>
         <PkmList name={props.pkmList[props.teamData.secondPkm - 1].name} num={props.teamData.secondPkm - 1}/>
         <PkmList name={props.pkmList[props.teamData.thirdPkm - 1].name} num={props.teamData.thirdPkm - 1}/>

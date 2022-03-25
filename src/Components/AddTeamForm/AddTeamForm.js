@@ -22,15 +22,22 @@ const AddTeamForm = (props) => {
         }
       })
   }
+  const [nameError, setNameError] = useState(false);
   const[submitError, setSubmitError] = useState(false)
   function handleSubmit(event) {
+    setSubmitError(false)
+    setNameError(false)
     event.preventDefault()
-    if(Object.values(form).every(ele => ele)) {
+    const regEx = /-/
+    console.log(form.team)
+    if(regEx.test(form.teamName)) {
+      setNameError(true)
+    } else if(Object.values(form).every(ele => ele)) {
       props.setPkmTeams(prevState => ([
         ...prevState,
         form
       ]))
-      props.togleForm(prevState => !prevState)
+      props.togleForm(prevState => !prevState)      
     } else {
       setSubmitError(true)
     }
@@ -53,6 +60,7 @@ const AddTeamForm = (props) => {
           name="teamName"
           value={form.teamName}
         />
+        {nameError && <p>Please dont use the "-" character in the name</p>}
         <select
           onChange={handleChange}
           name='firstPkm'
@@ -101,6 +109,7 @@ const AddTeamForm = (props) => {
           <option value=''>Pick a Pkm</option>
           {selectOptions}
         </select>
+        {nameError && <p>Please correct the name input</p>}
         {submitError && <p>You have to select all six Pkm's and type a name for your team</p>}
         <button>Submit Team</button>
       </form>

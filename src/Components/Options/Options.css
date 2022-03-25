@@ -2,10 +2,11 @@
   position: fixed;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 2fr 1fr
+  grid-template-columns: 1fr 1fr 1fr
 }
 
 .options-container button, input {
+  font-size: min(1rem, 4vw);
   border: 1px solid var(--dark-purple);
   border-radius: none;
   padding: 5px;

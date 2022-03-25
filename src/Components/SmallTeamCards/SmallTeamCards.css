@@ -8,7 +8,6 @@
   padding: 20px;
   color: var(--dark-purple);
   width: clamp(418px, 50%, 550px);
-  text-transform: capitalize;
   border-radius: 20px;
   margin: 20px;
 }
@@ -22,20 +21,21 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 0;
-  gap: 30px;
+  gap: 10px;
 }
 
-.small-team-cards-content li {
+.small-team-cards-ul > li {
+  width: 130px;
   display: block;
   border-bottom: 2px solid var(--dark-green);
   border-right: 2px solid var(--dark-green);
   border-left: 2px solid var(--dark-green);
   border-radius: 0 0 10px 10px;
-  padding: 10px;
-  width: 150px;
+  padding: 8px 7px;
   text-align: center;
   background-color: var(--dark-purple);
   color: white;
+  text-transform: capitalize;
 }
 
 .small-team-cards-content button {

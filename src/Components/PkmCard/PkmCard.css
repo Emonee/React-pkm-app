@@ -9,8 +9,14 @@
   background-color: white;
 }
 
+.pkm-card-container img {
+  width: min(135px,30vw);
+  height: min(135px,30vw);
+}
+
 .pkm-card-container h3 {
   margin-bottom: 7px;
+  text-transform: capitalize;
 }
 
 .pkm-card-container p {

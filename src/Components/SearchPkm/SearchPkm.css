@@ -1,0 +1,30 @@
+.search-pkm-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-pkm-container input {
+  border-radius: 10px;
+}
+
+.search-pkm-container > p {
+  color: red;
+  font-size: var(--small-font);
+}
+
+.search-pkm-container button {
+  background-color: var(--light-purple);
+  border: 2px solid var(--dark-green);
+  border-radius: 10px;
+  color: var(--dark-purple);
+  cursor: pointer;
+  padding: 4px 5px;
+}
+
+.search-pkm-container button:hover {
+  background-color: var(--dark-green);
+  border: 2px solid var(--light-purple);
+}

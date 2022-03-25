@@ -1,35 +1,38 @@
 .pkm-info-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   margin: 50px auto;
-  z-index: 0;
 
   background-color: var(--dark-purple);
   border: 2px solid var(--dark-green);
   border-radius: 20px;
   color: white;
   width: 87vw;
+  max-height: 90vh;
+  overflow: auto;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 35px;
 }
 
 #data-image {
   width: min(77%, 360px);
-  height: auto;
+  max-height: 35vh;
 }
 
 .pkm-data-container {
   text-align: center;
+  width: clamp(200px, 50%, 1000px);
 }
 
 .pkm-data-container p {
   margin-bottom: 10px;
+  font-size: 0.9rem;
 }
 
 .name-number-container {
@@ -39,6 +42,7 @@
 .name-number-container h2 {
   display: inline;
   margin-right: 8px;
+  text-transform: capitalize;
 }
 
 .name-number-container p {
@@ -49,9 +53,25 @@
 
 #pkm-stats-ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.weak-res-ul {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+}
+
+#code-button li {
+  width: auto;
 }
 
 #pkm-stats-ul li {
@@ -67,4 +87,13 @@
 
 #pkm-stats-ul span {
   font-size: var(--small-font);
+}
+
+.types-weak-and-ress {
+  width: auto;
+  font-size: var(--small-font);
+  display: block;
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px;
 }

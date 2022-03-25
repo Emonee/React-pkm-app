@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import AddTeamForm from './Components/AddTeamForm/AddTeamForm'
 import SmallTeamCards from './Components/SmallTeamCards/SmallTeamCards';
 import Options from './Components/Options/Options';
+import ImportTeam from './Components/ImportTeam/ImportTeam';
+import SearchPkm from './Components/SearchPkm/SearchPkm';
 import './App.css'
 
 const App = () => {
@@ -34,9 +36,11 @@ const App = () => {
 
   return (
     <>
-      <Options addTeam={addTeam} deleteLastTeam={deleteLastTeam} deleteTeams={deleteTeams} pkmList={pkmList}/>
+      <Options addTeam={addTeam} deleteLastTeam={deleteLastTeam} deleteTeams={deleteTeams}/>
       <div className='space-nav'></div>
       {showForm && <AddTeamForm data={pkmList} setPkmTeams={setPkmTeams} togleForm={setShowForm}/>}
+      <ImportTeam setPkmTeams={setPkmTeams}/>
+      <SearchPkm pkmList={pkmList} />
       <div className='small-team-cards-container'>
         {pkmList ? smallCards : <h2>Loading Teams...</h2>}
       </div>
