@@ -1,4 +1,4 @@
-#Pokemon Team App
+# Pokemon Team App
 
 This app consist in a pkm team builder. You can basically search pkm's, view their info and make team of six pkm's.
 
